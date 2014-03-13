@@ -3,7 +3,7 @@ require.config({
     baseUrl: "/scripts",
 
     /* starting point for application */
-    deps: ['backbone.marionette', 'bootstrap', 'main'],
+    deps: ['backbone.marionette', 'foundation', 'main'],
 
 
     shim: {
@@ -14,14 +14,14 @@ require.config({
             ],
             exports: 'Backbone'
         },
-        bootstrap: {
+        foundation: {
             deps: ['jquery'],
             exports: 'jquery'
         }
     },
 
     paths: {
-        jquery: '../bower_components/jquery/jquery',
+        jquery: '../bower_components/jquery/dist/jquery',
         backbone: '../bower_components/backbone-amd/backbone',
         underscore: '../bower_components/underscore-amd/underscore',
 
@@ -31,7 +31,8 @@ require.config({
         'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
 
         /* alias the bootstrap js lib */
-        bootstrap: 'vendor/bootstrap',
+        // bootstrap: 'vendor/bootstrap',
+        foundation: '../bower_components/foundation/js/foundation.min',
 
         /* Alias text.js for template loading and shortcut the templates dir to tmpl */
         text: '../bower_components/requirejs-text/text',
