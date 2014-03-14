@@ -1,6 +1,34 @@
 // @import 'sass-bootstrap/lib/bootstrap';
 @import 'foundation/scss/foundation';
 
+#sidebar{
+	width: 200px;
+	background: #333;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	overflow-y: scroll;
+	transition: left 0.5s;
+}
+#container{
+	padding-left: 220px;
+	transition: padding-left 0.5s;
+}
+@media #{$small-only} {
+#sidebar{
+	left: -200px;
+	&.open{
+		left: 0;
+	}
+}
+#container{
+	padding-left: 20px;
+	&.open{
+		padding-left: 220px;
+	}
+}
+}
 .hero-unit {
     margin: 50px auto 0 auto;
     // width: 400px;

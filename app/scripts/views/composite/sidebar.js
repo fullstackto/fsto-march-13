@@ -28,7 +28,13 @@ function( Backbone, Sidebaritems, SidebarTmpl  ) {
 		events: {},
 
 		/* on render callback */
-		onRender: function() {}
+		onRender: function() {
+			$("#menu").click(function(e){
+				e.preventDefault();
+				$("#sidebar").toggleClass("open");
+				$("#container").toggleClass("open");
+			});
+		}
 	});
 
 });
